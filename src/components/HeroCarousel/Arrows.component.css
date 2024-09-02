@@ -1,0 +1,32 @@
+/* Styles for the custom arrows */
+.custom-prev-arrow, .custom-next-arrow {
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 40px;
+  z-index: 1;
+}
+
+.custom-prev-arrow {
+  left: 10px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.custom-next-arrow {
+  right: 10px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.custom-prev-arrow:hover, .custom-next-arrow:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
