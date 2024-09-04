@@ -1,15 +1,46 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Defaultlayout from '../layouts/Default.layout'
+import axios from 'axios'
 
 import EntertaimentCard from '../components/Entertaiment/EntertaimentCard.Component'
 import HeroCarousel from '../components/HeroCarousel/HeroCarousel.Component'
 import PosterSlider from '../components/PosterSlider/PosterSlider.Component'
 
 
+
+
 const HomePage = () => {
   const [recommendedMovies,setRecommendedMovies]=useState([]);
   const [premierMovies, setPremierMovies] = useState([]);
   const [onlineStreamEvents, setonlineStreamEvents] = useState([]);
+
+  useEffect(()=>{
+    const requestTopRatedMovies=async()=>{
+      const getTopRatedMovies = await axios.get(
+        "https://api.themoviedb.org/3/movie/top_rated?&api_key=606451bd5391b5ce384027f7da9f1061"
+      );
+      setRecommendedMovies(getTopRatedMovies.data.results);
+    };
+      requestTopRatedMovies();
+  },[]);
+      useEffect(()=>{
+    const requestPopularMovies=async()=>{
+      const getPopularMovies = await axios.get(
+        "https://api.themoviedb.org/3/movie/top_rated?&api_key=606451bd5391b5ce384027f7da9f1061"
+      );
+      setPremierMovies(getPopularMovies.data.results);
+    };
+    requestPopularMovies();
+  },[]);
+   useEffect(()=>{
+    const requestUpcomingMovies=async()=>{
+      const getUpcomingMovies = await axios.get(
+        "https://api.themoviedb.org/3/movie/top_rated?&api_key=606451bd5391b5ce384027f7da9f1061"
+      );
+      setonlineStreamEvents(getUpcomingMovies.data.results);
+    };
+    requestUpcomingMovies();
+  },[]);
   return (
     <>
       <HeroCarousel />
@@ -29,10 +60,11 @@ const HomePage = () => {
           isDark={false}
         />
       </div>
+     
       <div className="bg-premier-800 py-12">
         <div className="container mx-auto px-4 md:px-12 my-8 flex flex-col gap-3">
           <div className="hidden md:flex">
-            <img src="" className="" />
+            <img src="" className="" alt="demo"/>
           </div>
           <PosterSlider
             title="Premiers"

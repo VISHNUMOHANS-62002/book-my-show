@@ -72,7 +72,7 @@ const EntertaimentCardSlider=()=>{
   return(
     <>
     <Slider {...settings}>
-      {EntertaimentImage.map((image)=><EntertaimentCard src={image}/>)}
+      {EntertaimentImage.map((image,index)=><EntertaimentCard src={image} key={index}/>)}
     </Slider>
     </>
   );
