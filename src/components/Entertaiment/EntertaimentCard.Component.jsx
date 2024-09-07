@@ -1,6 +1,6 @@
 import React from 'react'
 import Slider from 'react-slick'
-import { NextArrow, PrevArrow } from "../HeroCarousel/Arrows.Component";
+
 
 
 const EntertaimentCard = (props) => {
@@ -39,8 +39,6 @@ const EntertaimentCardSlider=()=>{
     autoplay: true,
     slidesToShow: 5,
     slidesToScroll: 4,
-    nextArrow: <NextArrow />,
-    prevArrow: <PrevArrow />,
     initialSlide: 0,
     responsive: [
       {

@@ -69,5 +69,5 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
-606451bd5391b5ce384027f7da9f1061-Api key
-https://api.themoviedb.org/3/movie/550?api_key=606451bd5391b5ce384027f7da9f1061
+7117aa06fc108c5eb3c76440db655caa-Api key
+https://api.themoviedb.org/3/movie/550?api_key=7117aa06fc108c5eb3c76440db655caa
